@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jemima Abu is a Front End Developer, Content Creator, and all-round nerd who lives in Lagos, Nigeria.">
+    <meta name="author" content="Jemima Abu">
+    <meta property="og:title" content="Jemima Abu">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jemima Abu">
+    <meta property="og:url" content="https://jemimaabu.com">
+    <meta property="og:image" content="icon\logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="#282C34">
+    <meta name="msapplication-navbutton-color" content="#282C34">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" sizes="600x482" href="icon\logo - large.png">
+    <link rel="icon" sizes="418x336" href="icon\logo.png">
+    <title>Jemima Abu: Front End Developer</title>
+
+  </head>
+  <body>
+    <noscript>
+      <style media="screen">
+        section{display: none;}
+        footer{display: none;}
+        header{display: none}
+        h2{
+          font-size: 1.5em;
+          font-weight: 100;
+        }
+        a{
+          color: inherit;
+        }
+      </style>
+        <div class="bckimg"></div>
+        <div class="background"></div>
+          <div class="text">
+            <h2>Sorry, you need to enable JavaScript to be able to view this site.</h2> Please <a href="https://www.enable-javascript.com/" target="_blank">enable JavaScript</a> and refresh the page or you could check out my <a href="#">JavaScript free site</a>.
+        </div>
+    </noscript>
+
+    <script type="text/javascript">
+    window.onscroll = function() {scroll()};
+    function scroll() {
+          var profile = document.getElementById("profile");
+          var profheight = profile.offsetTop;
+          var work = document.getElementById("work");
+          var workheight = work.offsetTop;
+          var writing = document.getElementById("writing");
+          var writheight = writing.offsetTop;
+          var contact = document.getElementById("contact");
+          var conheight = contact.offsetTop;
+
+      if (window.pageYOffset > profheight*0.5){
+        profiletext.style.opacity="1";
+      }
+      else if (window.pageYOffset < profheight*0.5){
+        profiletext.style.opacity="0";
+      }
+      if (window.pageYOffset > profheight*1.5){
+        worktext.style.opacity="1";
+      }
+      else if (window.pageYOffset < profheight*1.5){
+        worktext.style.opacity="0";
+      }
+      if (window.pageYOffset > profheight*2.5){
+        writingtext.style.opacity="1";
+      }
+      else if (window.pageYOffset < profheight*2.5){
+        writingtext.style.opacity="0";
+      }
+      if (window.pageYOffset > profheight*3.5){
+        contacttext.style.opacity="1";
+      }
+      else if (window.pageYOffset < profheight*3.5){
+        contacttext.style.opacity="0";
+      }
+      if (window.pageYOffset > profheight){
+        profiletext.style.position="fixed";
+      }
+      else if (window.pageYOffset < profheight){
+        profiletext.style.position="relative";
+      }
+      if (window.pageYOffset > workheight){
+        worktext.style.position="fixed";
+      }
+      else if (window.pageYOffset < workheight){
+        worktext.style.position="relative";
+      }
+      if (window.pageYOffset > writheight){
+        writingtext.style.position="fixed";
+      }
+      else if (window.pageYOffset < writheight){
+        writingtext.style.position="relative";
+      }
+      if (window.pageYOffset > conheight){
+        contacttext.style.position="fixed";
+      }
+      else if (window.pageYOffset < conheight){
+        contacttext.style.position="relative";
+      }
+    }
+    </script>
+    <header>
+      <div class="header-image"></div>
+      <div class="header-black"></div>
+        <div class="header-text">
+          <h1>Jemima Abu</h1><h2>I build sites and write stuff.</h2>
+          <div class="logo">
+            <a href="https://codepen.io/Jemima_abu" title="Codepen" target="_blank"><img src="icon\png\codepen.png" alt="Codepen Icon"></a>
+            <a href="https://github.com/Jemimaabu" title="Github" target="_blank"><img src="icon\png\github.png" alt="Github Icon"></a>
+            <a href="https://medium.com/@jemimaabu" title="Medium" target="_blank" style="filter:invert(100%)"><img src="icon\png\medium.png" alt="Medium Icon"></a>
+            <a href="https://www.linkedin.com/in/jemimaabu/" title="LinkedIn" target="_blank"><img src="icon\png\linkedin.png" alt="LinkedIn Icon"></a>
+            <a href="https://www.instagram.com/jemima_abu/" title="Instagram" target="_blank"><img src="icon\png\instagram.png" alt="Instagram Icon"></a>
+        </div>
+      </div>
+    </header>
+    <section id="profile">
+      <div id="profiletext">
+      <div class="back1"></div>
+      <div class="back2"></div>
+      <div class="col1">About</div>
+      <div class="col2">I'm a self taught Front End Developer and school taught Systems Engineer who lives in Lagos, Nigeria.<br> I build responsive and  interactive sites using pure HTML and CSS with a little bit of JavaScript.<br> I also write articles and teach yoga and art because I'm <a href="https://www.youtube.com/watch?v=cM4kqL13jGM" target="_blank" style="color:inherit;text-decoration:none;cursor:text"> cool like that</a>.<br> Basically, I'm a huge nerd and I love to code.<br> You can check out some of my projects on <a href="https://github.com/Jemimaabu" target="_blank">Github</a> and my designs on <a href="https://codepen.io/Jemima_abu/" target="_blank">Codepen</a>.</div>
+    </div>
+    </section>
+    <section id="work">
+      <div id="worktext">
+        <div class="back1"></div>
+        <div class="back2"></div>
+      <div class="col1">Work</div>
+      <div class="col2"><a href="#">Omoelle.com</a><br><a href="#">Responsive CSS Grid</a></div>
+      </div>
+    </section>
+    <section id="writing">
+      <div id="writingtext">
+        <div class="back1"></div>
+        <div class="back2"></div>
+      <div class="col1">Writing</div>
+      <div class="col2">
+      <a href="#">How To Write A CV In Nigeria</a><br>
+      <a href="#">How To Practice Coding In Nigeria</a>
+      </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div id="contacttext">
+      <div class="back1"></div>
+      <div class="back2"></div>
+      <div class="col1">Contact</div>
+      <div class="col2">
+        <form class="" action="index.html" method="post">
+      <label for="name">Name:</label><input type="text" name="" value="">
+      <label for="email">Email:</label><input type="text" name="" value="">
+      <label for="message">Message:</label><textarea name="name" rows="8" cols="80"></textarea>
+      </form>
+      </div>
+      </div>
+    </section>
+  </body>
+</html>
+<!--<section class="load">
+  <div class="back1"></div>
+  <div class="back2"></div>
+  <div class="col1"><img src="icon\logo.png" alt="floating yogi">
+  <div class="loadtxt">
+  This site is still under construction. <br>Thanks for visiting. Here's a song I like, for your trouble.</div></div>
+  <div class="col2"><iframe src="https://www.youtube.com/embed/809aH04Z7bY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
+  </video>
+</section>-->
