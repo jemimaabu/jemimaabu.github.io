@@ -2,7 +2,18 @@
   box-sizing: border-box;
   transition: 300ms
 }
-
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #EAEAEB;
+}
+::-webkit-scrollbar-thumb {
+    background: #21252B;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 #redaccent{color: #E06C75}
 #yellowaccent{color: #D19A66}
 #greenaccent{color: #73C990}
