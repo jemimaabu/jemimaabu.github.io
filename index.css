@@ -20,7 +20,13 @@
 #purpleaccent{color: #C678DD}
 #tealaccent{color:#56B6B9}
 #blueaccent{color: #61AFEF}
-.switch-wrapper{
+.resume{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}.switch-wrapper{
   position: fixed;
   z-index: 5;
   top: 0;
