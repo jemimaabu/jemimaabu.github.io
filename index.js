@@ -365,3 +365,8 @@ else{
     }
     }
 }
+var hours = new Date().getHours();
+if (hours>=6 && hours<=17) {
+  switchCheckbox.checked = true;
+  switchCheckbox.onclick();
+}
