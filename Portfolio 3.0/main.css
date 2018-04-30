@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto|Source+Sans+Pro|Montserrat');
 *{
   box-sizing: border-box;
+  transition: opacity 1s
 }
 ::selection {
     background: #ff0080;
@@ -19,7 +20,7 @@ header{
 .header-image{
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-  background-image: url("icon/yoga.jpg");
+  background-image: url("../icon/yoga.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -88,33 +89,29 @@ section{
   height: 100vh;
   position: relative;
   background-color: black;
+  color: white;
+  overflow: hidden;
 }
 /*section:nth-of-type(1){
   background-color: #121212;
 }*/
-#profiletext,#worktext, #writingtext,#contacttext{
-  height: 75vh;
-  width: fit-content;
-  margin: auto;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+#profile,#work,#writing,#contact{
 }
-#content{
+#profiletext, #worktext, #writingtext, #contacttext{
   height: 100%;
   width: 100%;
-  margin: auto;
   top: 0;
   left: 0;
   right: 0;
   left: 0;
+  background-color: transparent;
+  opacity: 0;
+  transition: all 2s;
 }
 .back1, .back2{
   background-color: white;
   opacity: 0.5;
   position: absolute;
-  top: 0;
 }
 .profile .col1{
   background-image: url('profile.jpgx');
@@ -124,29 +121,27 @@ section{
 }
 .col1{
     position: absolute;
-    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0.5px 7px 0px black;
+    display: grid;
+    font-size: 1em;
     color: black;
     background-color: #dfe3e6;
     visibility: visible;
-    z-index: 1;
-    overflow: scroll;
-  }
-  #profile .col1, #profile .col2{
-    box-shadow: 0px 0.5px 7px 0px black;
+    overflow: hidden;
   }
 .col2{
-  overflow: scroll;
   background-color: #dfe3e6;
-  position: absolute;
   color: black;
+  box-shadow: 0px 0.5px 7px 0px black;
+  position: absolute;
   float: right;
   padding: 2%;
   font-size: 1.8vmax;
   font-family: serif;
   visibility: visible;
-}
-.col1::-webkit-scrollbar,.col2::-webkit-scrollbar {
-display: none;
 }
 #profile .col2 a{
   color: orange;
@@ -156,6 +151,7 @@ display: none;
   text-decoration: underline;
 }
 @media only screen and (max-width:900px){
+  section{height: fill-available;}
   .back1,.back2{display: none}
   .col1{width: 100%;height: 25%;position: relative;margin: 0;box-shadow: none;}
   .col2{width: 100%; height: 75%;position: relative;margin: 0;box-shadow: none;font-size: 1.5em}

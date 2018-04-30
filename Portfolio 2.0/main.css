@@ -5,7 +5,7 @@ body{
   background-color: #300a6d29;
   font: 100% Lato, "Helvetica Neue", Helvetica, arial, sans-serif;
   line-height: 1.5;
-  /*overflow: hidden;*/
+  overflow-x: hidden;
   }
 * {
   box-sizing: border-box;
@@ -25,6 +25,16 @@ header{
   color: white;
   box-shadow: 1px 1px 8px 2px grey;
   }
+.header-overlay{
+  background-color: black;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
 header a{
   position: absolute;
   bottom: 0;
@@ -169,6 +179,7 @@ section a{
 }
 .intro{
   font-size: 3.7vw;
+  position: absolute;
 }
 h1 {
   margin: 0;
@@ -232,7 +243,4 @@ h1 {
 .skills .col a{
   color: #FF0080;
   text-decoration: underline;
-}
-.form input, .form textarea{
-  cursor: url(pen.png), auto;
 }

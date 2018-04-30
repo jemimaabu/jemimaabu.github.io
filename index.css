@@ -26,7 +26,8 @@
   top: 0;
   right: 0;
   margin: 15px;
-}.switch-wrapper{
+}
+.switch-wrapper{
   position: fixed;
   z-index: 5;
   top: 0;
@@ -302,7 +303,7 @@ body{
   .mine{
     width: 100%;
     height: 100%;
-    background-image: url('pagecap.png');
+    background-image: url('icon/pagecap.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -452,8 +453,7 @@ body{
     grid-column: 1;
     grid-row: 1/3
   }
-  /*form{
-    grid-column: 1;
-    grid-row: 2
-  }*/
+  .resume a{
+    font-size: 0.8em;
+  }
 }
