@@ -1,0 +1,459 @@
+*{
+  box-sizing: border-box;
+  transition: 300ms
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #EAEAEB;
+}
+::-webkit-scrollbar-thumb {
+    background: #21252B;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#redaccent{color: #E06C75}
+#yellowaccent{color: #D19A66}
+#greenaccent{color: #73C990}
+#purpleaccent{color: #C678DD}
+#tealaccent{color:#56B6B9}
+#blueaccent{color: #61AFEF}
+.resume{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}
+.switch-wrapper{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  margin: 5px;
+  font-size: 0;
+}
+.switch-wrapper input {display:none;}
+
+.switch-label{
+  font-size: 1rem;
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: top;
+  padding: 5px 10px;
+  transition: transform ease-in .2s;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #eee;
+  background-color: #023660;
+  background-image:
+    radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%),
+radial-gradient(circle, #fff 10%, transparent 30%),
+radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%),
+    radial-gradient(circle, #fff 10%, transparent 30%);
+  background-size: 8% 8%, 7% 7%, 6% 6%, 8% 8%, 8% 8%, 6% 6%, 6% 6%, 8% 8%, 7% 7%;
+  background-position: 20% 20%, 45% 30%, 25% 55%, 20% 90%, 40% 60%, 5% 50%, 58% 10%, 58% 60%, 50% 80%;
+  background-repeat: no-repeat;
+  -webkit-transition: .4s;
+  transition: .4s;
+  overflow: hidden;
+  margin-top: 0.5vmin
+}
+
+.switch:before {
+  position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    top: 50%;
+    right: 2px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    background-image: radial-gradient(circle, #c4c4c4 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%);
+    background-size: 40% 40%, 25% 25%, 50% 50%, 30% 30%;
+    background-position: 20% 20%, 65% 30%, 120% 100%, 20% 80%;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.2);
+    transition: transform ease-in .2s;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.switch-label.day{
+}
+
+input:checked ~ .switch {
+  background-color: #2196F3;
+  background-image:
+    radial-gradient(circle, #fefefe 20%, transparent 30%),
+    radial-gradient(circle, #fefefe 20%, transparent 30%),
+radial-gradient(circle, #fefefe 20%, transparent 30%),
+     radial-gradient(circle, #fefefe 20%, transparent 30%),
+    radial-gradient(circle, #fefefe 20%, transparent 30%),
+radial-gradient(circle, #fefefe 20%, transparent 30%);
+  background-size: 50% 50%, 60% 60%, 40% 40%, 40% 40%, 50% 50%, 40% 40%;
+  background-position: 60% 82%, 80% 80%, 82% 80%, 110% 20%, 134% 12%, 130% 20%;
+  background-repeat: no-repeat;
+}
+  input:checked ~ .switch:before{
+    background-color: #ffeb3b;
+    background-image: radial-gradient(circle, #ffc107 15%, #ffeb3b 100%);
+    box-shadow: 0px 0px 20px 10px rgba(255, 235, 255, 0.4);
+    background-size: 40% 40%, 25% 25%, 50% 50%, 30% 30%;
+    background-position: 20% 20%, 65% 30%, 120% 100%, 20% 80%;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.2);
+}
+  }
+
+.switch-wrapper input:checked .switch-label.day{
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  ~ .switch-label.night{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+.switch-wrapper input:checked ~ .switch:before{
+  transform: translate(-60px,-50%);
+}
+
+body{
+  margin: 0;
+  background-color: #21252b;
+  font-family: "Courier New", Courier, monospace;
+}
+  body::before,body::after{
+    background: inherit;
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    left: 0;
+  }
+  body::before{
+    top:0;
+    height: 55px
+  }
+  body::after{
+    bottom:0;
+    height: 10vmin
+  }
+  #header-image{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    background-image: url("icon/yoga.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: fixed;
+    left: 1vmax;
+    right: 1vmax;
+  }
+  header{
+    height: 100vh;
+    position: relative;
+    background-color: #282c34;
+    margin: 0 1vmax;
+  }
+  .header-overlay{
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    height: 100vh;
+    left: 1vmax;
+    right: 1vmax;
+  }
+  .header-text{
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      margin: auto;
+      height: fit-content;
+      width: fit-content;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: transparent;
+      text-align: center;
+      padding: 1vmax;
+      font-family: sans-serif;
+  }
+  header h1{
+    margin:5px;
+    font-size: 3.5em;
+    font-weight: 300;
+  }
+  header h2{
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: white;
+    opacity: 0.8;
+    margin: 0;
+    width: 1.5em;
+  	width: 24ch;
+  	white-space: nowrap;
+  	overflow: hidden;
+    animation: type 4s steps(25, end);
+  }
+  header #logo{
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    width: 50vw;
+    left: 25vw;
+    right: 25vw;
+    height: 10vmin;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    filter: invert(100%);
+  }
+  header #logo img{
+    box-sizing: content-box;
+    height: 5vmin;
+  }
+  #logo #medium{
+    filter: invert(100%);
+  }
+  @keyframes type{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; }
+  }
+  section{
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    background-color: #282C34;
+    color: #D7DAE0;
+    margin: 0 1vmax;
+    transition: 200ms;
+    display: grid;
+    grid-template-columns: 30% 32.5% 32.5%;
+    grid-column-gap: 2%;
+    grid-template-rows: 100%;
+    padding: 8vmin 0 10vmin 0;
+  }
+  #sidebar{
+    height: inherit;
+    width: 30vw;
+    background-color: #21252b;
+    border: 1px solid transparent;
+    border-right-color: #18181f;
+    position: relative;
+    z-index: 2;
+    padding: 1vmax 0 10vmin 0;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  #work h2{
+    text-align:center;
+  }
+  .sites{
+    width: 100%;
+    height: inherit;
+    grid-column: 2;
+    font-size: 1.5em;
+    align-items: center;
+  }
+  .border{
+    width: 75%;
+    height: 25%;
+    border: 1px solid #282C34;
+    background-color: #f9f9f9;
+    border-radius: 1vmin 1vmin 0 0;
+    padding: 3%;
+    margin: auto;
+  }
+  .border .inner{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: inherit;
+    background-color: black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .mine{
+    width: 100%;
+    height: 100%;
+    background-image: url('icon/pagecap.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .under{
+    margin: auto;
+    width: 75%;
+    height: 10%;
+    border: 1px solid #282c34;
+    border-top-color: transparent;
+    background-color: #f2f2f2;
+    border-radius: 0 0 1vmin 1vmin;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vmax;
+    color: #D7DAE0
+  }
+  .under a{
+    text-decoration: none;
+    color: #282C34;
+  }
+  .under a:hover{
+    text-decoration: underline;
+    color:#782C34
+  }
+  .writes{
+    width: 100%;
+    height: inherit;
+    grid-column: 3;
+    font-size: 1.5em;
+  }
+  .writes a{
+    text-decoration: none;
+  }
+  .writes a:hover{
+    text-decoration: underline;
+  }
+  li{
+    width: 30vw;
+    padding: 2.5vmin;
+    font-size: 5vmin;
+    font-family: 'Open Sans';
+    color: #6B717D
+  }
+  #about{
+    align-items: center;
+    justify-content: center;
+    background-color: #282d37
+  }
+  .abouttext{
+    grid-column: 2/4;
+    color: inherit;
+    font-size: 1.5em;
+  }
+  .abouttext a{
+    text-decoration: none;
+  }
+  #contact{
+    align-items: center;
+    justify-content: center;
+    background-color: #292f3b
+  }
+  .contacttext{
+    grid-column: 2/4;
+    color: inherit;
+    font-size: 1.5em;
+  }
+  form{
+    grid-column: 3;
+    width: 100%;
+    padding: 1vmax
+  }
+  form textarea{
+    width: 100%;
+    height: 40vmin;
+    padding: 1vmin;
+  }
+  form input{
+    width: 100%;
+    margin-bottom: 1vmin;
+    padding: 0.5vmin;
+  }
+  form button{
+    width: 30%;
+    padding: 1vmax;
+    background-color: inherit;
+    border: 1px solid buttoncase;
+    margin-top: 1vmin;
+    color: inherit;
+  }
+  form button:hover{
+    box-shadow: 0px 0px 5px 0px grey;
+    border-color: transparent
+  }
+  button input{
+    color: inherit;
+    background-color: inherit;
+    height: 100%;
+    margin: 0;
+    outline: none;
+    border: none;
+  }
+@media only screen and (max-width:660px){
+  #sidebar{
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    border-bottom-color: #18181f;
+    border-right-color: transparent
+  }
+  #sidebar li{
+    position: absolute;
+    width: 100%;
+    color: #73C990;
+    padding: 1vmin;
+  }
+  section{
+    min-height: 100vh;
+    height: auto;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    padding: 2vmin 2vmax;
+    align-items: center;
+    justify-content: center;
+  }
+  .sites{
+    grid-column: 1;
+    grid-row: 1
+  }
+  .border{
+    width: 65vw;
+    height: 30vh
+  }
+  .under{
+    width: 65vw;
+    height: 10vh;
+  }
+  .writes{
+    grid-column: 1;
+    grid-row: 2
+  }
+  .abouttext{
+    grid-column: 1;
+    grid-row: 1/3
+  }
+  .contacttext{
+    grid-column: 1;
+    grid-row: 1/3
+  }
+  .resume a{
+    font-size: 0.8em;
+  }
+}
