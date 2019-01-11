@@ -27,6 +27,12 @@
   right: 0;
   margin: 15px;
 }
+.resume a {
+  text-decoration: none; 
+  color: #ab6df5;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
 .switch-wrapper{
   position: fixed;
   z-index: 5;
@@ -271,15 +277,23 @@ body{
     align-items: center;
     list-style: none;
   }
-  #work h2{
-    text-align:center;
-  }
   .sites{
     width: 100%;
     height: inherit;
     grid-column: 2;
     font-size: 1.5em;
     align-items: center;
+  }
+  .sites li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .sites li a:hover {
+    text-decoration: underline;
+  }
+  .sites li p {
+    font-size: 0.7em;
+    margin-top: 0.2em;
   }
   .border{
     width: 75%;
@@ -341,12 +355,20 @@ body{
   .writes a:hover{
     text-decoration: underline;
   }
-  li{
+  .writes p {
+    font-size: 0.7em;
+    margin-top: 0.2em;
+  }
+  #sidebar li{
     width: 30vw;
     padding: 2.5vmin;
     font-size: 5vmin;
     font-family: 'Open Sans';
     color: #6B717D
+  }
+  #sidebar li a {
+    text-decoration:none;
+    color:inherit
   }
   #about{
     align-items: center;
@@ -359,7 +381,7 @@ body{
     font-size: 1.5em;
   }
   .abouttext a{
-    text-decoration: none;
+    text-decoration: underline;
   }
   #contact{
     align-items: center;
