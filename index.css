@@ -20,19 +20,6 @@
 #purpleaccent{color: #C678DD}
 #tealaccent{color:#56B6B9}
 #blueaccent{color: #61AFEF}
-.resume{
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  margin: 15px;
-}
-.resume a {
-  text-decoration: none; 
-  color: #ab6df5;
-  font-family: sans-serif;
-  font-weight: lighter;
-}
 .switch-wrapper{
   position: fixed;
   z-index: 5;
@@ -466,8 +453,5 @@ button input{
   .contacttext{
     grid-column: 1;
     grid-row: 1/3
-  }
-  .resume a{
-    font-size: 0.8em;
   }
 }
