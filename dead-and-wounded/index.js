@@ -16,9 +16,12 @@ generateCompInput();
 
 //Get difficulty level
 document.getElementById("difficulty-level").onchange = function(){
+	win = false;
 	difficulty = +document.getElementById("difficulty-level").value;
 	generateCompInput();
 	document.getElementById("user-input").maxLength = difficulty;
+	document.getElementById("result-body").innerHTML = "";
+	document.getElementById("user-input").value = ""
 };
 
 function deadAndWounded(compInput, userInput) {
@@ -75,7 +78,6 @@ function guess() {
 		if (win) {
 			return;
 		} else {
-			document.getElementById("user-input").value="";
 			addResultRow(userInput, deadAndWounded(compInput, userInput))
 		}
     }
