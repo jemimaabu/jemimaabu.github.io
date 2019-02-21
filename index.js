@@ -1,12 +1,8 @@
 switchCheckbox.onclick = function colorChanger(){
-  var switchCheckbox = document.getElementById("switchCheckbox")
   var sidebar = document.getElementById("sidebar");
   var work = document.getElementById("work");
-  var workcolor = document.getElementById("workcolor")
   var about = document.getElementById("about");
-  var aboutcolor = document.getElementById("aboutcolor")
   var contact = document.getElementById("contact");
-  var contactcolor = document.getElementById("contactcolor")
   var logo = document.getElementById("logo")
   var header = document.getElementById("header-image")
   var medium = document.getElementById("medium")

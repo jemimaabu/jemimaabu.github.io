@@ -236,10 +236,9 @@ section{
   margin: 0 1vmax;
   transition: 200ms;
   display: grid;
-  grid-template-columns: 30% 32.5% 32.5%;
-  grid-column-gap: 2%;
+  grid-template-columns: minmax(32.5vw, 1fr) 1.5fr 1.5fr;
+  grid-column-gap: 1em;
   grid-template-rows: 100%;
-  padding: 8vmin 0 10vmin 0;
 }
 #sidebar{
   height: 100vh;
@@ -350,6 +349,7 @@ section{
   color:inherit
 }
 #about{
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #282d37
@@ -363,6 +363,7 @@ section{
   text-decoration: underline;
 }
 #contact{
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #292f3b
@@ -424,11 +425,9 @@ button input{
   section{
     min-height: 100vh;
     height: auto;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
     grid-template-columns: 100%;
     padding: 2vmin 2vmax;
-    align-items: center;
-    justify-content: center;
   }
   .sites{
     grid-column: 1;
