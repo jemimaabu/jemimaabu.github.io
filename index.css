@@ -14,18 +14,41 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-#redaccent{color: #E06C75}
-#yellowaccent{color: #D19A66}
-#greenaccent{color: #73C990}
-#purpleaccent{color: #C678DD}
-#tealaccent{color:#56B6B9}
-#blueaccent{color: #61AFEF}
+.redaccent{color: #E06C75}
+.yellowaccent{color: #D19A66}
+.greenaccent{color: #73C990}
+.purpleaccent{color: #C678DD}
+.tealaccent{color:#56B6B9}
+.blueaccent{color: #61AFEF}
+
+#light {background-color: #EAEAEB}
+#light .redaccent{color: #E45649}
+#light .yellowaccent{color: #986801}
+#light .greenaccent{color: #50A14F}
+#light .purpleaccent{color: #A626A4}
+#light .tealaccent{color:#009688}
+#light .blueaccent{color: #4078F3}
+#light #logo {filter: invert(0%)}
+#light #header-image {filter: grayscale(0%)}
+#light #sidebar {background-color: #EAEAEB}
+#light section {color: #383842}
+#light section#work {background-color: #FAFAFA; color: #383842}
+#light section#about {background-color: #FBFBFB; color: #383842}
+#light section#contact {background-color: #FCFCFC; color: #383842}
+#light #logo #medium {filter: invert(0%)}
+#light .switch-wrapper {color: inherit}
+#light #sidebar .active {
+  background-color: #FBFBFB;
+  color: #2DB448;
+}
+
 .switch-wrapper{
   position: fixed;
   z-index: 5;
   top: 0;
   margin: 5px;
   font-size: 0;
+  color: #fff;
 }
 .switch-wrapper input {
   display:none;
@@ -166,21 +189,18 @@ header{
   right: 1vmax;
 }
 .header-text{
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    margin: auto;
-    height: fit-content;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: transparent;
-    text-align: center;
-    padding: 1vmax;
-    font-family: sans-serif;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  color: white;
+  text-align: center;
+  padding: 1vmax;
+  font-family: sans-serif;
 }
 header h1{
   margin:5px;
@@ -241,7 +261,7 @@ section{
   grid-template-rows: 100%;
 }
 #sidebar{
-  height: 100vh;
+  height: calc(100vh - (55px+10vmin));
   width: 30vw;
   background-color: #21252b;
   border: 1px solid transparent;
@@ -254,6 +274,10 @@ section{
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+#sidebar.fixed {
+  position: fixed;
+  top: 55px;
 }
 .sites{
   width: 100%;
@@ -348,11 +372,15 @@ section{
   text-decoration:none;
   color:inherit
 }
-#about{
-  display: flex;
+#sidebar .active {
+  background-color: #282c34;
+  color: #7CC379;
+}
+#contact, #about {
   align-items: center;
-  justify-content: center;
-  background-color: #282d37
+}
+#about{
+  background-color: #282d37;
 }
 .abouttext{
   grid-column: 2/4;
@@ -363,10 +391,7 @@ section{
   text-decoration: underline;
 }
 #contact{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #292f3b
+  background-color: #292f3b;
 }
 .contacttext{
   grid-column: 2/4;
@@ -413,14 +438,24 @@ button input{
     width: 100%;
     height: fit-content;
     left: 0;
-    border-bottom-color: #18181f;
-    border-right-color: transparent
+    border: none;
   }
   #sidebar li{
+    opacity: 0;
     position: absolute;
     width: 100%;
+    background-color: inherit;
     color: #73C990;
     padding: 1vmin;
+    transition: .3s;
+  }
+  #light #sidebar .active {
+    opacity: 1;
+    background-color: inherit;
+  }
+  #sidebar .active {
+    opacity: 1;
+    background-color: inherit;
   }
   section{
     min-height: 100vh;
@@ -428,6 +463,11 @@ button input{
     grid-template-rows: repeat(2, minmax(min-content, max-content));
     grid-template-columns: 100%;
     padding: 2vmin 2vmax;
+  }
+  #contact, #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .sites{
     grid-column: 1;
