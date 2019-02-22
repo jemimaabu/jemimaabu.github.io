@@ -23,7 +23,6 @@ html {
 .purpleaccent{color: #C678DD}
 .tealaccent{color:#56B6B9}
 .blueaccent{color: #61AFEF}
-
 #light {background-color: #EAEAEB}
 #light .redaccent{color: #E45649}
 #light .yellowaccent{color: #986801}
@@ -45,8 +44,6 @@ html {
   background-color: #FBFBFB;
   color: #2DB448;
 }
-
-
 .switch-wrapper{
   position: fixed;
   z-index: 5;
